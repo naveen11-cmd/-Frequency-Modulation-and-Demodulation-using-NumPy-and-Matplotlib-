@@ -33,7 +33,38 @@ __Algorithm:__
 6. Plot the Signals: Use Matplotlib to plot the message signal, carrier signal, and modulated signal.
 
 __Programme:__
+// Parameters
+Am = 8.8;        
+Fm = 326;         
+B  =  6.2;         
+Ac = 17.6;          
+Fc = 3260;       
+Fs = 32600;       
+T  = 0:1/Fs:2/Fm; 
+
+// Message signal
+em = Am * cos(2*%pi*Fm*T);
+subplot(3,1,1);
+plot(T, em);
+xtitle("Message Signal");
+xgrid();
+
+// Carrier signal
+ec = Ac * cos(2*%pi*Fc*T);
+subplot(3,1,2);
+plot(T, ec);
+xtitle("Carrier Signal");
+xgrid();
+// FM signal
+efm = Ac * cos( (2*%pi*Fc*T) + (B * sin(2*%pi*Fm*T)) );
+subplot(3,1,3);
+plot(T, efm);
+xtitle("FM Signal");
+xgrid();
 
 __Output:__
+<img width="630" height="469" alt="image" src="https://github.com/user-attachments/assets/def1fa3b-3e48-4957-9db1-32146123c0f4" />
 
 __Result:__
+![WhatsApp Image 2026-04-07 at 12 04 45 PM](https://github.com/user-attachments/assets/63c08569-7135-4f7a-8100-eeae834e56f8)
+
