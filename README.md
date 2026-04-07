@@ -34,12 +34,12 @@ __Algorithm:__
 
 __Programme:__
 // Parameters
-Am = 8.8;        
-Fm = 326;         
-B  =  6.2;         
-Ac = 17.6;          
-Fc = 3260;       
-Fs = 32600;       
+Am = 9.7;        
+Fm = 380;         
+B  =  4.6;         
+Ac = 19.4;          
+Fc = 3800;       
+Fs = 38000;       
 T  = 0:1/Fs:2/Fm; 
 
 // Message signal
